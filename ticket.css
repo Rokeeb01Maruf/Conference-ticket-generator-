@@ -1,0 +1,209 @@
+:root {
+    --Neutral-0: hsl(0, 0%, 100%);
+    --Neutral-300: hsl(252, 6%, 83%);
+    --Neutral-500: hsl(245, 15%, 58%);
+    --Neutral-700: hsl(245, 19%, 35%);
+    --Neutral-900: hsl(248, 70%, 10%);
+    --Orange-500: hsl(7, 88%, 67%);
+    --Orange-700: hsl(7, 71%, 60%);
+    --Gradient: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: Regular;
+    src: url('Inconsolata-Regular.ttf');
+}
+@font-face {
+    font-family: Head;
+    src: url('Inconsolata-Bold.ttf');
+}
+@font-face {
+    font-family: semiBold;
+    src: url('Inconsolata-Medium.ttf');
+}
+@font-face {
+    font-family: overBold;
+    src: url('Inconsolata-ExtraBold.ttf');
+}
+@font-face {
+    font-family: Vari;
+    src: url('Inconsolata-VariableFont_wdth\,wght.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('background-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    text-align: center;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-inline: auto;
+    max-width: 100vw;
+}
+
+.logo{
+    width: 150px;
+    margin-inline: auto;
+    margin-bottom: 30px;
+}
+
+.logo img{
+    max-width: 100%;
+}
+
+.main h1{
+    font: 2rem Head;
+    margin-bottom: 10px;
+}
+
+.main .grad{
+    display: inline;
+    background: linear-gradient(to right, orangered, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p{
+    font: 0.8rem Regular;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+.aside{
+    color: var(--Orange-500);
+}
+
+.details{
+    position: absolute;
+    top: 310px;
+    text-align: start;
+    padding-left: 20px;
+}
+
+.date{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    font: .9rem Regular;
+}
+
+.id-details{
+    max-height: 64px;
+    display: flex;
+    gap: 10px;
+    text-align: start;
+}
+
+.profile-pics{
+    height: 64px;
+    width: 64px;
+    border-radius: 5px;
+}
+
+.name{
+    margin-block: 10px;
+    font: 1rem semiBold;
+}
+
+.gitHub{
+    display: flex;
+    align-items: center;
+    margin-block: 10px;
+}
+
+.code{
+    writing-mode: vertical-lr;
+    position: absolute;
+    left: 340px;
+    top: 30px;
+    font: 1rem semiBold;
+    color: gray;
+}
+
+.ticket {
+    width: 380px;
+    position: relative;
+    margin-inline: auto;
+}
+
+.ticket-container{
+    margin-bottom: 50px;
+    margin-inline: auto;
+    max-width: 100%;
+}
+
+.p-top{
+    position: absolute;
+    display: flex;
+    top: 0px;
+    right: 50px;
+    z-index: -1;
+}
+
+.p-lines{
+    position: absolute;
+    top: 0px;
+    max-width: 100vw;
+    max-height: 100%;
+    z-index: -1;
+}
+
+.p-bottom{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+
+@media (max-width: 500px) {
+
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .p-top{
+        width: 200px;
+        right: 0;
+        top: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ticket{
+        width: 350px;
+    }
+
+    .details{
+        padding-left: 20px;
+        top: 308px;
+    }
+
+    .code{
+        left: 300px;
+        top: 10px;
+    }
+
+    .ticket{
+        top: 5px;
+    }
+
+}
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Ticket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo-full.svg" alt="">
+        </div>
+        <div class="main">
+            <h1>Your Journey to Coding Conf<br> 2025 Starts Here!</h1>
+            <p>Secure your spot at next year's biggest conference.</p>
+        </div>
+        <form action="ticket.html">
+            <div class="upload">
+                <p class="avatar">Upload Avatar</p>
+                <input type="file" id="files" accept="image/*">
+                <label for="files" id="file">
+                    <img src="icon-upload.svg" alt="">
+                    <p class="file-upload">Drag and drop or click to upload</p>
+                </label>
+                <p class="info"><img src="icon-info.svg" alt=""> Upload your photo (JPG or PNG, max size: 500KB)</p>
+            </div>
+            <div id="name">
+                <p class="name">Full Name</p>
+                <input type="text" id="text">
+            </div>
+            <div id="email">
+                <p class="name">Email Address</p>
+                <input type="email" placeholder="example@email.com" id="text">
+            </div>
+            <div id="gitHub">
+                <p class="name">GitHub Username</p>
+                <input type="text" placeholder="@yourusername" id="text">
+            </div>
+            <div id="button">
+                <button>Generate My Ticket</button>
+            </div>
+        </form>
+    </div>
+    <img src="pattern-lines.svg" alt="" class="p-lines">
+    <img src="pattern-squiggly-line-top.svg" alt="" class="p-top">
+    <img src="pattern-circle.svg" alt="" class="p-circle">
+<script src="script.js"></script>
+</body>
+</html>

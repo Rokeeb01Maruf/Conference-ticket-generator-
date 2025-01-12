@@ -1,0 +1,211 @@
+:root {
+    --Neutral-0: hsl(0, 0%, 100%);
+    --Neutral-300: hsl(252, 6%, 83%);
+    --Neutral-500: hsl(245, 15%, 58%);
+    --Neutral-700: hsl(245, 19%, 35%);
+    --Neutral-900: hsl(248, 70%, 10%);
+    --Orange-500: hsl(7, 88%, 67%);
+    --Orange-700: hsl(7, 71%, 60%);
+    --Gradient: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: Regular;
+    src: url('Inconsolata-Regular.ttf');
+}
+@font-face {
+    font-family: Head;
+    src: url('Inconsolata-Bold.ttf');
+}
+@font-face {
+    font-family: semiBold;
+    src: url('Inconsolata-Medium.ttf');
+}
+@font-face {
+    font-family: overBold;
+    src: url('Inconsolata-ExtraBold.ttf');
+}
+@font-face {
+    font-family: Vari;
+    src: url('Inconsolata-VariableFont_wdth\,wght.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('background-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.container{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-inline: auto;
+}
+
+.logo{
+    width: 150px;
+    margin-inline: auto;
+    margin-bottom: 30px;
+}
+
+.logo img{
+    max-width: 100%;
+}
+
+.main h1{
+    font: 2rem Head;
+    margin-bottom: 10px;
+}
+
+.main p{
+    font: 1rem Regular;
+}
+
+form{
+    text-align: start;
+    margin-inline: auto;
+    max-width: 90%;
+    margin-top: 30px;
+}
+
+form .avatar{
+    font: 0.75rem Regular;
+    margin-bottom: 10px;
+}
+
+form #file{
+    background-color: var(--Neutral-700);
+    border: 1px solid ;
+    width: 323px;
+    height: 100px;
+    border-radius: 0.8rem;
+    border-style: dashed;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}
+
+form #file img{
+    width: 48px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--Neutral-700);
+    border: 0.1px solid var(--Neutral-500);
+    margin-inline: auto;
+}
+
+
+form .file-upload{
+    font: 0.8rem Regular;
+    margin-top: 10px;
+}
+
+form #files{
+    display: none;
+}
+
+form .info{
+    font: 0.5rem Regular;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form .info img{
+    max-height: 10px;
+}
+
+form .name{
+    font: 0.8rem Regular;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+form #text{
+    width: 323px;
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid var(--Neutral-300);
+    background-color: var(--Neutral-700);
+    margin-bottom: 15px;
+    padding: 20px;
+    color: var(--Neutral-300);
+    font: 1rem Regular;
+    color: white;
+    outline: 0;
+}
+
+form #button button{
+    width: 323px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: var(--Orange-700);
+    border: none;
+    color: var(--Neutral-900);
+    font: 0.8rem Head;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.p-top{
+    position: absolute;
+    display: flex;
+    top: 0px;
+    right: 50px;
+    z-index: -1;
+}
+
+.p-lines{
+    position: absolute;
+    top: 0px;
+    max-width: 100vw;
+    max-height: 100%;
+    z-index: -1;
+}
+
+
+.p-circle{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    z-index: -1;
+}
+
+@media (max-width: 500px) {
+    .p-top{
+        width: 200px;
+        right: 0;
+        top: 0;
+    }
+
+    .p-circle{
+        overflow: hidden;
+        top: 30%;
+        left: 45%;
+        width: 200px;
+    }
+
+    form #text{
+        height: 50px;
+        line-height: 2;
+    }
+}
